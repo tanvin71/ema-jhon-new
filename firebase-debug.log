@@ -1,0 +1,86 @@
+[debug] [2020-10-27T03:55:49.894Z] ----------------------------------------------------------------------
+[debug] [2020-10-27T03:55:49.898Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\md fakrul\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-10-27T03:55:49.898Z] CLI Version:   8.12.1
+[debug] [2020-10-27T03:55:49.898Z] Platform:      win32
+[debug] [2020-10-27T03:55:49.898Z] Node Version:  v12.18.1
+[debug] [2020-10-27T03:55:49.920Z] Time:          Tue Oct 27 2020 09:55:49 GMT+0600 (Bangladesh Standard Time)
+[debug] [2020-10-27T03:55:49.920Z] ----------------------------------------------------------------------
+[debug] [2020-10-27T03:55:49.921Z] 
+[debug] [2020-10-27T03:55:49.948Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-27T03:55:49.949Z] > authorizing via signed-in user
+[debug] [2020-10-27T03:55:49.950Z] [iam] checking project ema-john-simple-902ef for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-10-27T03:55:49.953Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-27T03:55:49.954Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-10-27T03:56:11.047Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-10-27T03:56:11.053Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-27T03:56:11.054Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-10-27T03:56:11.495Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Tue, 27 Oct 2020 03:57:04 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-27T03:56:11.516Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ema-john-simple-902ef  
+ 
+[debug] [2020-10-27T03:56:12.232Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 27 Oct 2020 03:57:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'ema-john-simple-902ef'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-10-27T03:56:12.302Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ema-john-simple-902ef/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-10-27T03:56:14.701Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 27 Oct 2020 03:57:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[ema-john-simple-902ef]: beginning deploy... 
+[info] i  hosting[ema-john-simple-902ef]: found 20 files in build 
+[debug] [2020-10-27T03:56:15.727Z] [hosting] hash cache [YnVpbGQ] stored for 20 files
+[debug] [2020-10-27T03:56:15.728Z] [hosting][hash queue][FINAL] {"max":878,"min":34,"avg":115.65,"active":0,"complete":20,"success":20,"errored":0,"retried":0,"total":20,"elapsed":943}
+[debug] [2020-10-27T03:56:15.729Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ema-john-simple-902ef/versions/3f38cc8ff409242c:populateFiles  
+ <request body omitted>
+[debug] [2020-10-27T03:56:37.168Z] [populateQueue] Retrying task index 0
+[debug] [2020-10-27T03:56:37.169Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ema-john-simple-902ef/versions/3f38cc8ff409242c:populateFiles  
+ <request body omitted>
+[debug] [2020-10-27T03:56:39.136Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 27 Oct 2020 03:57:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-27T03:56:39.153Z] [hosting][populate queue][FINAL] {"max":1969,"min":1969,"avg":1969,"active":0,"complete":1,"success":1,"errored":0,"retried":1,"total":1,"elapsed":23430}
+[debug] [2020-10-27T03:56:39.153Z] [hosting] uploads queued: 10
+[debug] [2020-10-27T03:57:00.698Z] [uploadQueue] Retrying task ea2379a8a47c157c1523307f90f403f250de2211a2b62e1eef258446556938eb
+[debug] [2020-10-27T03:57:09.986Z] [uploadQueue] Retrying task 713fce23e3b110088223f28abe8f8e8d11a02ea741e657f110c4d1eb751b674a
+[debug] [2020-10-27T03:57:10.007Z] [uploadQueue] Retrying task 6dcfa011d652facf2b091dbff07ce5bc1a9af4d83280eb76fc1b9a8a83eb5765
+[debug] [2020-10-27T03:57:10.268Z] [uploadQueue] Retrying task f54c047984a71df37cc03636020fb6875fe7dbba3d96fbc04d32b5afcc82d58b
+[debug] [2020-10-27T03:57:31.867Z] [uploadQueue] Retrying task 6dcfa011d652facf2b091dbff07ce5bc1a9af4d83280eb76fc1b9a8a83eb5765
+[debug] [2020-10-27T03:58:03.793Z] [uploadQueue] Retrying task 6dcfa011d652facf2b091dbff07ce5bc1a9af4d83280eb76fc1b9a8a83eb5765
+[debug] [2020-10-27T03:58:06.039Z] [hosting][upload queue][FINAL] {"max":19291,"min":2062,"avg":7153.7,"active":0,"complete":10,"success":10,"errored":0,"retried":6,"total":10,"elapsed":86902}
+[info] +  hosting[ema-john-simple-902ef]: file upload complete 
+[debug] [2020-10-27T03:58:06.046Z] [hosting] deploy completed after 111341ms
+[debug] [2020-10-27T03:58:06.553Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "ema-john-simple-902ef"
+    },
+    "site": "ema-john-simple-902ef",
+    "version": "sites/ema-john-simple-902ef/versions/3f38cc8ff409242c"
+  }
+]
+[info] i  hosting[ema-john-simple-902ef]: finalizing version... 
+[debug] [2020-10-27T03:58:06.560Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/ema-john-simple-902ef/versions/3f38cc8ff409242c?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2020-10-27T03:58:23.649Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 27 Oct 2020 03:59:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-27T03:58:23.650Z] [hosting] finalized version for ema-john-simple-902ef: {"name":"sites/ema-john-simple-902ef/versions/3f38cc8ff409242c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2020-10-27T03:57:07.562129Z","createUser":{"email":"fakrulislamtanvin1@gmail.com"},"finalizeTime":"2020-10-27T03:59:16.789586Z","finalizeUser":{"email":"fakrulislamtanvin1@gmail.com"}}
+[info] +  hosting[ema-john-simple-902ef]: version finalized 
+[info] i  hosting[ema-john-simple-902ef]: releasing new version... 
+[debug] [2020-10-27T03:58:23.654Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ema-john-simple-902ef/releases?version_name=sites/ema-john-simple-902ef/versions/3f38cc8ff409242c  
+ {"message":null}
+[debug] [2020-10-27T03:59:00.240Z] Error: connect ETIMEDOUT 216.58.197.42:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.197.42:443
